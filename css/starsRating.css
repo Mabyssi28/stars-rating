@@ -5,7 +5,7 @@
 .star {
   display: inline-block;
   margin-right: 5px;
-  cursor: pointer;
+  cursor: var(--stars-rating--cursor, pointer);
   position: relative;
   color: var(--stars-rating--color-empty, #CCCCCC);
   width: var(--stars-rating--width, 30px);

@@ -18,7 +18,13 @@
     <script src="../js/starsRating.js"></script>
     <script>
         const stars = new StarsRating('sr-1');
-        const stars2 = new StarsRating('sr-2');
+        const stars2 = new StarsRating('sr-2', {
+            isDisabled: true,
+            value: 2,
+            colorEmpty: 'red',
+            colorFilled: 'blue',
+            size: 50,
+        });
 
         document.getElementById('btn-1').onclick = () => {
             console.log("VALOR STARS 1: " + stars.getValue());
