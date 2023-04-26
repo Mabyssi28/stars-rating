@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example basic</title>
+    <link rel="stylesheet" href="../css/starsRating.css">
+</head>
+<body>
+    <div class="stars-rating" data-stars="5" id="sr-1"></div>
+    <br>
+    <div class="stars-rating" id="sr-2"></div>
+
+    <button id="btn-1">Get value 1</button>
+    <button id="btn-2">Get value 2</button>
+
+    <script src="../js/starsRating.js"></script>
+    <script>
+        const stars = new StarsRating('sr-1');
+        const stars2 = new StarsRating('sr-2');
+
+        document.getElementById('btn-1').onclick = () => {
+            console.log("VALOR STARS 1: " + stars.getValue());
+        }
+
+        document.getElementById('btn-2').onclick = () => {
+            console.log("VALOR STARS 2:" + stars2.getValue());
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.stars-rating {
+  display: inline-block;
+}
+
+.star {
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+  position: relative;
+  color: var(--stars-rating--color-empty, #CCCCCC);
+  width: var(--stars-rating--width, 30px);
+  height: var(--stars-rating--height, 30px);
+}
+
+.star::before {
+  content: "\2605";
+  position: absolute;
+  font-size: var(--stars-rating--font-size, 30px);
+  top: 0;
+  left: 0;
+}
+
+.star.filled::before {
+  color: var(--stars-rating--color-filled, #FFCC00);
+}
